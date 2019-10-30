@@ -12,9 +12,29 @@ public class Node {
 	
 	public Node moveLeftOrRight(int value) {
 		if(value > this.value) {
-			return this.right;
+			if(this.right == null)
+			{
+				this.addRightChild(value);
+				return null;
+			}else{
+				return this.right;
+			}
 		}else {
-			return this.left;
+			if(this.left == null)
+			{
+				this.addLeftChild(value);
+				return null;
+			}else{
+				return this.left;
+			}
 		}
+	}
+
+	public void addLeftChild(int value){
+		this.left = new Node(value);
+	}
+
+	public void addRightChild(int value){
+		this.right = new Node(value);
 	}
 }
