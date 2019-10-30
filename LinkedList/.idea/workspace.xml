@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2bcce29-69ba-4a81-8b84-48ae482f4e4c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/uri/DoublyLinkedElem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/uri/DoublyLinkedElem.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571998468784</updated>
       <workItem from="1571998473740" duration="3727000" />
-      <workItem from="1572408296962" duration="8000" />
+      <workItem from="1572408296962" duration="43000" />
     </task>
     <servers />
   </component>
