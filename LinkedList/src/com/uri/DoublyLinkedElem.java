@@ -5,6 +5,7 @@ public class DoublyLinkedElem<T> {
     public DoublyLinkedElem next;
     public DoublyLinkedElem prev;
     public static DoublyLinkedElem head;
+    public static DoublyLinkedElem traverse;
 
     DoublyLinkedElem(T value, DoublyLinkedElem prev, DoublyLinkedElem next){
         this.value = value;
@@ -26,26 +27,40 @@ public class DoublyLinkedElem<T> {
         if (DoublyLinkedElem.head == null)
         {
             DoublyLinkedElem.head = this;
+            DoublyLinkedElem.traverse = this;
         }
-        else if()
+        else if(prev == null){
+            DoublyLinkedElem.head = this;
+            DoublyLinkedElem.traverse = this;
+        }
     }
 
     public void remove(){
-        this.prev.next = this.next;
-        this.next.prev = this.prev;
+        if(this.prev != null)
+        {
+            this.prev.next = this.next;
+        }else{
+            DoublyLinkedElem.head = this.next;
+            DoublyLinkedElem.traverse = this.next;
+        }
+        if(this.next != null)
+        {
+            this.next.prev = this.prev;
+        }
     }
 
     public String to_list(){
         String list = "";
 
-        while (DoublyLinkedElem.head != null){
-            list += DoublyLinkedElem.head.value.toString();
-            if(head.next != null)
+        while (DoublyLinkedElem.traverse != null){
+            list += DoublyLinkedElem.traverse.value.toString();
+            if(DoublyLinkedElem.traverse.next != null)
             {
                 list+= "<->";
             }
-            DoublyLinkedElem.head = DoublyLinkedElem.head.next;
+            DoublyLinkedElem.traverse = DoublyLinkedElem.traverse.next;
         }
+        DoublyLinkedElem.traverse = DoublyLinkedElem.head;
         return list;
     }
 }
